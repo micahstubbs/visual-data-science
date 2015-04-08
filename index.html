@@ -52,7 +52,7 @@ img {
   position: absolute;
   left: calc(50% - (980px/2))
 }
-</style><section style="text-align:center;padding-top:5em;"><h2 id="angular-js-d3-js">human insight + machine learning</h2>
+</style><section style="text-align:center;padding-top:5em;"><h2 id="angular-js-d3-js">visual data science</h2>
 <h2 id="angular-js-d3-js">with d3js</h2>
 <h4 id="-highlight-superheroic-data-driven-documents-highlight-"><highlight>Houston Energy Data Science Meetup - April 2015</highlight></h4>
 <h4 id="angular-js-d3-js"><a href="https://twitter.com/micahstubbs">@micahstubbs</a></h4>
@@ -64,7 +64,7 @@ img {
 <li>data visualization engineer at <a href="http://www.enlink.com/">EnLink Midstream</a></li>
 <li>truth & beauty operator at intentive information design</li>
 <li><a href="http://twitter.com/micahstubbs">@micahstubbs</a> | <a href="https://github.com/micahstubbs">my projects</a></li>
-</ul>
+</ul></section>
 <!---
 </section><section style="padding:1em 2em"><h2 id="announcements">Announcements</h2>
 <ul>
@@ -86,13 +86,19 @@ img {
 <li><a href="http://www.nytimes.com/interactive/2014/12/27/upshot/mapping-the-paths-to-the-nfl-playoffs.html?ties=1&amp;abt=0002&amp;abg=0">Mapping NFL Playoffs</a></li>
 </ul>
 -->
-</section><section style="padding:1em 2em"><h2 id="d3-history">a history of d3js</h2>
+
+
+<section style="padding:1em 2em"><h4 id="visual-data-science"><a href="http://twitter.com/moebio">@moebio</a> on <a href="https://vimeo.com/88326173#t=22m8s">visual data science</a></h4>
+</section>
+<!-- <section><iframe src="https://vimeo.com/88326173#t=22m8s"></iframe></section> -->
+<section style="padding:1em 2em"><h2 id="d3-history">a history of d3js</h2>
 <ul>
 <li>created by <a href="http://twitter.com/mbostock">@mbostock</a> at <a href="http://vis.stanford.edu/">Stanford</a></li>
 <li>Born out of the <a href="http://mbostock.github.io/protovis/">Protovis</a> project</li> 
 <li><a href="http://vis.stanford.edu/papers/d3">D3: Data Driven Documents</a> - 2011 Paper published in the IEEE Transactions on Visualization & Computer Graphics </li>
 </ul>
-</section><section style="padding:1em 2em"><h2 id="d3-the-good">d3js - the good</h2>
+</section>
+<section style="padding:1em 2em"><h2 id="d3-the-good">d3js - the good</h2>
 <ul>
 <li>Embraces web standards</li>
 <li>Doesn&#39;t abstract you away from the DOM (document object model)</li>
@@ -108,7 +114,7 @@ img {
 <li>The data joins will hurt your brain<ul>
 <li><highlight>Most important</highlight>, and most misunderstood concept in D3</li>
 <li>If it feels like you&#39;re doing something wrong, <highlight>it&#39;s wrong</highlight></li>
-<li>Resources<ul>
+<li>fundamentals<ul>
 <li><a href="http://bost.ocks.org/mike/join/">Thinking with Joins</a></li>
 <li><a href="http://bost.ocks.org/mike/circles/">Three Little Circles</a></li>
 <li><a href="http://bost.ocks.org/mike/selection/">How Selections Work</a></li>
@@ -117,79 +123,7 @@ img {
 </ul>
 </li>
 </ul>
-<!--
-</section><section style="padding:1em 2em"><h2 id="angular-the-good">Angular - The Good</h2>
-<ul>
-<li>Embraces HTML</li>
-<li>Reusable &quot;widgets&quot; via directives</li>
-<li>Testability</li>
-<li>Dependency injection</li>
-<li>Simple apps are, well, simple!</li>
-<li>Backed by Google</li>
-</ul>
-</section><section style="padding:1em 2em"><h2 id="angular-the-bad">Angular - The Bad</h2>
-<ul>
-<li>Embraces HTML</li>
-<li>Steep learning curve</li>
-<li>No solid model concept</li>
-<li><code>$scope.$watch</code> can be problematic if abused</li>
-<li>Manually triggering <code>$scope.$digest</code> can be cumbersome, and kill performance</li>
-</ul>
-</section><section style="padding:1em 2em"><h2 id="why-angular-d3-">Why Angular + D3?</h2>
-<ul>
-<li>Angular shouldn&#39;t do data viz*</li>
-<li>D3 shouldn&#39;t do application logic</li>
-<li>Frameworks exist for a reason<ul>
-<li>Separation of business logic and visualization</li>
-<li>Don&#39;t make D3 be good at something it&#39;s not</li>
-<li>Don&#39;t make Angular be good at something it&#39;s not</li>
-</ul>
-</li>
-</ul>
-<p><a href="http://alexandros.resin.io/angular-d3-svg/">*It can be done</a></p>
-</section><section style="padding:1em 2em"><h2 id="how-angular-d3-">How Angular + D3?</h2>
-<ul>
-<li>D3 code should independent of Angular</li>
-<li>Create <a href="http://bost.ocks.org/mike/chart/">reusable</a> D3 components<ul>
-<li>Forces chart API</li>
-<li>Improves testability, scalability, migration...ability</li>
-<li>Framework agnostic</li>
-</ul>
-</li>
-<li>Manually trigger Angular&#39;s digest cycle on chart events</li>
-<li>Don&#39;t abuse <code>$scope.watch</code> or <code>$scope.$apply</code>, it is expensive!</li>
-</ul>
-</section><section style="text-align:center;padding-top:5em;"><h1 id="example">Example</h1>
-<h3 id="-highlight-step-1-static-visualization-highlight-"><highlight>Step 1 - Static Visualization</highlight></h3>
-</section><section><iframe src="/austinvoting/0"></iframe></section><section style="text-align:center;padding-top:5em;"><h1 id="example">Example</h1>
-<h3 id="-highlight-step-2-interactive-highlight-"><highlight>Step 2 - Interactive</highlight></h3>
-</section><section><iframe src="/austinvoting/1"></iframe></section><section style="text-align:center;padding-top:5em;"><h1 id="example">Example</h1>
-<h3 id="-highlight-step-3-dash-of-angular-highlight-"><highlight>Step 3 - Dash of Angular</highlight></h3>
-</section><section><iframe src="/austinvoting/2"></iframe></section><section style="text-align:center;padding-top:5em;"><h1 id="example">Example</h1>
-<h3 id="-highlight-step-4-directive-highlight-"><highlight>Step 4 - Directive!</highlight></h3>
-</section><section><iframe src="/austinvoting/3"></iframe></section><section style="text-align:center;padding-top:5em;"><h1 id="example">Example</h1>
-<h3 id="-highlight-step-5-dispatch-highlight-"><highlight>Step 5 - Dispatch</highlight></h3>
-</section><section><iframe src="/austinvoting/4"></iframe></section><section style="text-align:center;padding-top:5em;"><h1 id="example">Example</h1>
-<h3 id="-highlight-step-6-polish-highlight-"><highlight>Step 6 - Polish</highlight></h3>
-</section><section><iframe src="/austinvoting/5"></iframe></section><section style="padding:0.5em 2em"><h2 id="recap">Recap</h2>
-<ul>
-<li>Use the reusable paradigm!<ul>
-<li>Keep D3 code independent</li>
-<li>Put reusable inside angular directive</li>
-</ul>
-</li>
-<li>Use <code>$scope.watch</code> wisely<ul>
-<li>Watching large objects is costly</li>
-<li>Uncontrolled watches can fire render rapidly, harming performance</li>
-</ul>
-</li>
-<li>Use <code>d3.dispatch</code> and <code>d3.rebind</code> to expose D3 events to Angular<ul>
-<li>Manually fire <code>$scope.$apply</code> to inform Angular of D3</li>
-</ul>
-</li>
-</ul>
--->
-</section><section style="padding:2em 2em;"><h2 id="d3-specific-help">D3 Specific Help</h2>
+</section><section style="padding:2em 2em;"><h2 id="d3-specific-help">d3js resources</h2>
 <ul>
 <li><a href="https://github.com/mbostock/d3/wiki/Tutorials">Tutorials</a></li>
 <li><a href="https://groups.google.com/forum/#!forum/d3-js">Google Group</a></li>
@@ -197,6 +131,15 @@ img {
 <li>So.Many.Examples<ul>
 <li><a href="https://github.com/mbostock/d3/wiki/Gallery">Github</a></li>
 <li><a href="http://christopheviau.com/d3list/gallery.html">D3.js Gallery</a></li>
+</ul>
+</li>
+</ul>
+</section><section style="padding:2em 2em;"><h2 id="d3-specific-help">further watching</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=-0Pe30Zz3a0">David Mimno - Understanding Machine Learning with D3: Visualization for Models and Algorithms</a></li>
+<li><a href="http://visualized.com/2014/presents/santiago-ortiz/">
+Santiago Ortiz: Explorations of a new Language: Beyond Linearity and Quantity</a></li>
+
 </ul>
 </li>
 </ul>
